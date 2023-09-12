@@ -1,7 +1,8 @@
 const server = require("./src/server");
+require('dotenv').config();
 const { conn } = require('./src/db.js');//conexion con la BDD
 const countriesLoader = require("./src/utils/countriesLoader") //funcio para cargar los datos de los paises en la BDD
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 const { Country } = conn.models //obtenemos el modelo Country
 //alter:true
