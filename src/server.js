@@ -10,7 +10,7 @@ server.use(cors());//middleware para que el servidor responda a solicitudes desd
 server.use(morgan("dev")); //middleware para el registro de solicitudes HTTP 
 server.use(express.json());//middleware permite a Express interpretar las solicitudes entrantes con formato JSON y transformarlas en objetos JavaScript.
 server.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", ACCES_CONTROL_URL); // update to match the domain you will make the request from
+    res.header("Access-Control-Allow-Origin", '*'); // update to match the domain you will make the request from
     res.header("Access-Control-Allow-Credentials", "true");
     res.header(
       "Access-Control-Allow-Headers",
